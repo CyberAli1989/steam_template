@@ -1,0 +1,129 @@
+header {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 200px;
+  transition: .5s ease;
+
+  .brand {
+    color: $web_white;
+    font-size: 1.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  nav {
+    position: relative;
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+
+        a {
+          position: relative;
+          color: $web_white;
+          font-size: 1em;
+          font-weight: 500;
+          text-decoration: none;
+          margin-right: 30px;
+          transition: .3s ease;
+
+          &:before {
+            content: "";
+            position: absolute;
+            background-color: $web_black;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            right: 50%;
+            transition: .3s ease;
+          }
+
+          &:hover {
+            &:before {
+              width: 100%;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1040px) {
+  header {
+    padding: 12px 20px;
+
+    .menu_btn {
+      background-image: url("../images/nav/icons8-menu-64.png");
+      transform: rotate(180deg);
+      background-repeat: no-repeat;
+      background-size: 30px;
+      background-position: center;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: .3s ease;
+
+      &.active {
+        background-image: url("../images/nav/icons8-close-64.png");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: center;
+        z-index: 99;
+        transition: .3s ease;
+      }
+
+      span {
+        font-size: 1.5em;
+      }
+    }
+
+    nav {
+      display: none;
+
+      &.active {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(1, 1, 1, .5);
+      }
+
+      ul {
+        background-color: $web_white;
+        width: 600px;
+        min-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 /20%);
+
+        li {
+          margin: 20px 0;
+
+          a {
+            color: $web_black;
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+  }
+}

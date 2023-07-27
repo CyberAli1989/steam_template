@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <title>CyberAli</title>
+</head>
+<body>
+<!--Header START-->
+<header>
+    <a class="brand" href="#">CyberAli</a>
+    <div class="menu_btn"></div>
+    <nav class="navigation">
+        <ul class="navigation-item">
+            <li>
+                <a href="#">خانه</a>
+            </li>
+            <li>
+                <a href="#">محصولات</a>
+            </li>
+            <li>
+                <a href="#">درباره ما</a>
+            </li>
+            <li>
+                <a href="#">تماس با ما </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<!--Header END-->
+<!--Hero Section START-->
+<section class="main_slider">
+    <video data-slid="1" id="video_player" src="assets/videos/slid1.mp4" muted loop autoplay
+           class="video_slide active"></video>
+    <video data-slid="2" src="assets/videos/slid2.mp4" muted loop autoplay class="video_slide"></video>
+    <video data-slid="3" src="assets/videos/slid3.mp4" muted loop autoplay class="video_slide"></video>
+    <video data-slid="4" src="assets/videos/slid4.mp4" muted loop autoplay class="video_slide"></video>
+    <video data-slid="5" src="assets/videos/slid5.mp4" muted loop autoplay class="video_slide"></video>
+    <video data-slid="6" src="assets/videos/slid6.mp4" muted loop autoplay class="video_slide"></video>
+    <div class="content">
+        <h1>
+            عنوان
+        </h1>
+        <p>
+            لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،
+            لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،
+            لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،
+            لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ،
+        </p>
+        <a href="#">مطالعه بیشتر</a>
+    </div>
+    <div class="media_icons">
+        <a href="#"><span class="fa-brands fa-instagram"></span></a>
+        <a href="#"><span class="fa-brands fa-telegram"></span></a>
+        <a href="#"><span class="fa-brands fa-github"></span></a>
+    </div>
+    <ul class="slider_navigation">
+        <li data-btn="1" class="nav_btn active"></li>
+        <li data-btn="2" class="nav_btn"></li>
+        <li data-btn="3" class="nav_btn"></li>
+        <li data-btn="4" class="nav_btn"></li>
+        <li data-btn="5" class="nav_btn"></li>
+        <li data-btn="6" class="nav_btn"></li>
+    </ul>
+</section>
+<!--Hero Section END-->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    $(function () {
+        /*Nav Function START*/
+        $('.menu_btn').on("click", () => {
+            $(".menu_btn").toggleClass('active');
+            $(".navigation").toggleClass('active');
+        })
+        /*Nav Function END*/
+        /*Slider Function START*/
+        let i = 1;
+        let duration = $('.video_slide.active')[0].duration * 1000
+        setInterval(function () {
+            ++i;
+            if (i <= $('.nav_btn').length) {
+                $('.nav_btn[data-btn=' + i + ']').click()
+                duration = $('.video_slide.active')[0].duration * 1000
+            } else
+                i = 0;
+        }, duration);
+
+        $(".nav_btn").on("click", function (event) {
+            event.preventDefault();
+            $(".nav_btn").removeClass("active");
+            $(this).addClass("active");
+            $('.video_slide').removeClass('active')
+            $('.video_slide[data-slid=' + $(this).data("btn") + ']').addClass('active')
+        })
+    });
+    /*SliderFunction END*/
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+.main_slider {
+  margin: 0 auto;
+  padding: 100px 200px;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $web_blue;
+
+  &:before {
+    content: "";
+    z-index: 81;
+    position: absolute;
+    background-color: rgba($web_blue, .2);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+  }
+
+  video {
+    z-index: 80;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .video_slide {
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+    &.active {
+      clip-path: circle(150% at 0 50%);
+      transition: 2s ease;
+      transition-property: clip-path;
+    }
+  }
+
+
+  .slider_navigation {
+    list-style: none;
+    z-index: 88;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+
+    .nav_btn {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: $web_white;
+      box-shadow: 0 0 2px rgba($web_white, .5);
+
+      &.active {
+        background: $web_blue;
+        transform: scale(1.3) !important;
+      }
+
+      &:not(:last-child) {
+        margin-left: 20px;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .content {
+    z-index: 90;
+    color: $web_white;
+    width: 70%;
+    margin-top: 50px;
+
+    h1 {
+      font-size: 4em;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      line-height: 75px;
+      margin-bottom: 40px;
+    }
+
+    p {
+      margin-bottom: 65px;
+    }
+
+    a {
+      background-color: $web_white;
+      padding: 15px 35px;
+      color: $web_blue;
+      font-size: 1.1em;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 2px;
+    }
+  }
+
+  .media_icons {
+    z-index: 90;
+    position: absolute;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease;
+
+    a {
+      color: $web_white;
+      font-size: 1.6em;
+      transition: .3s ease;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1040px) {
+  .main_slider {
+    padding: 100px 20px;
+
+    .media_icons {
+      left: 15px;
+    }
+  }
+}
