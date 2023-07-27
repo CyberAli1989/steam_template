@@ -8,20 +8,10 @@
   justify-content: center;
   flex-direction: column;
   background-color: $web_blue;
-
-  &:before {
-    content: "";
-    z-index: 81;
-    position: absolute;
-    background-color: rgba($web_blue, .2);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-  }
+  overflow: hidden;
 
   video {
-    z-index: 80;
+    z-index: 70;
     position: absolute;
     top: 0;
     right: 0;
@@ -29,10 +19,63 @@
     height: 100%;
     object-fit: cover;
   }
+
   .video_slide {
+    display: flex;
     position: absolute;
+    z-index: 80;
     width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
     clip-path: circle(0% at 0 50%);
+
+    &:before {
+      content: "";
+      z-index: 82;
+      position: absolute;
+      background-color: rgba($web_blue, .2);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 999;
+      color: $web_white;
+      width: 70%;
+      margin: 0 auto;
+
+      h1 {
+        font-size: 4em;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        line-height: 75px;
+        margin-bottom: 40px;
+      }
+
+      p {
+        margin-bottom: 65px;
+      }
+
+      a {
+        background-color: $web_white;
+        padding: 15px 35px;
+        color: $web_blue;
+        font-size: 1.1em;
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: 2px;
+      }
+    }
+
     &.active {
       clip-path: circle(150% at 0 50%);
       transition: 2s ease;
@@ -40,15 +83,18 @@
     }
   }
 
-
   .slider_navigation {
+    position: absolute;
     list-style: none;
-    z-index: 88;
-    position: relative;
+    z-index: 80;
     display: flex;
-    justify-content: center;
-    transform: translateY(80px);
     margin-bottom: 12px;
+    justify-content: center;
+    height: 100%;
+    align-items: flex-end;
+    bottom: 20px;
+    left: 0;
+    right: 0;
 
     .nav_btn {
       width: 12px;
@@ -70,36 +116,6 @@
       &:hover {
         transform: scale(1.2);
       }
-    }
-  }
-
-  .content {
-    z-index: 90;
-    color: $web_white;
-    width: 70%;
-    margin-top: 50px;
-
-    h1 {
-      font-size: 4em;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 5px;
-      line-height: 75px;
-      margin-bottom: 40px;
-    }
-
-    p {
-      margin-bottom: 65px;
-    }
-
-    a {
-      background-color: $web_white;
-      padding: 15px 35px;
-      color: $web_blue;
-      font-size: 1.1em;
-      font-weight: 500;
-      text-decoration: none;
-      border-radius: 2px;
     }
   }
 
