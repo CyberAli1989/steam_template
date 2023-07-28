@@ -1,0 +1,10 @@
+footer{
+  position: relative;
+  background-color: #2b4389;
+  z-index: 99;
+  svg{
+    position: absolute;
+    top: 50px;
+    z-index: -1;
+  }
+}

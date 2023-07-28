@@ -52,6 +52,78 @@
       width: 70%;
       margin: 0 auto;
 
+      button {
+        outline: none;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+
+        a {
+          color: $web_white;
+          text-decoration: none;
+        }
+      }
+
+      .box {
+        width: 140px;
+        height: auto;
+        float: left;
+        transition: .5s linear;
+        position: relative;
+        display: block;
+        overflow: hidden;
+        padding: 15px;
+        text-align: center;
+        margin: 0 5px;
+        background: transparent;
+        text-transform: uppercase;
+        font-weight: 900;
+
+        &:before {
+          position: absolute;
+          content: '';
+          left: 0;
+          bottom: 0;
+          height: 4px;
+          width: 100%;
+          border-bottom: 4px solid transparent;
+          border-left: 4px solid transparent;
+          box-sizing: border-box;
+          transform: translateX(100%);
+        }
+
+        &:after {
+          position: absolute;
+          content: '';
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          border-top: 4px solid transparent;
+          border-right: 4px solid transparent;
+          box-sizing: border-box;
+          transform: translateX(-100%);
+        }
+
+        &:hover {
+          box-shadow: 0 5px 15px rgba($web_white, 0.5);
+
+          &:before {
+            border-color: $web_white;
+            height: 100%;
+            transform: translateX(0);
+            transition: .3s transform linear, .3s height linear .3s;
+          }
+
+          &:after {
+            border-color: $web_white;
+            height: 100%;
+            transform: translateX(0);
+            transition: .3s transform linear, .3s height linear .5s;
+          }
+        }
+      }
+
       h1 {
         font-size: 4em;
         font-weight: 900;
@@ -90,7 +162,6 @@
     display: flex;
     margin-bottom: 12px;
     justify-content: center;
-    height: 100%;
     align-items: flex-end;
     bottom: 20px;
     left: 0;
