@@ -1,0 +1,136 @@
+.first_mage {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    height: 1000px;
+    background-color: aqua;
+    margin-top: 7rem;
+}
+.first_mage .searchBox__placeHolder {
+    position: absolute;
+    top: 5rem;
+}
+.products_variable {
+    width: 30%;
+    height: 100%;
+}
+
+.firstpage_main_product_placHolder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    
+    /* background-color: black; */
+    height: 1000px;
+    width: 70%;
+}
+.box_palceHolder {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
+    position: relative;
+    height: 50%;
+
+}
+
+.box_palceHolder:hover .box img {
+    height: 100%;
+    margin-top: -3.5rem;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    bottom: -10%;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    transform: skewY(-15deg);
+    background: transparent;
+    border-radius: 1rem;
+    /* border: solid 1rem purple; */
+    /* margin-top: 5rem; */
+    /* padding: .5rem; */
+    overflow: hidden;
+    z-index: 2;
+
+}
+
+ .box img {
+    transition: .3s ease;
+    position: absolute;
+    z-index: 3;
+    margin-top: -3.5rem;
+    width: 110%;
+    height: 160%;
+    object-fit: cover;
+    border-radius: 1rem;
+    transform: rotate(15deg) skew(15deg);
+    box-shadow: 0px -5px 9px 2px rgba(0, 0, 0, 0.52);
+    -webkit-box-shadow: 0px -5px 9px 2px rgba(0, 0, 0, 0.52);
+    -moz-box-shadow: 0px -5px 9px 2px rgba(0, 0, 0, 0.52);
+
+}
+
+.box-supper {
+    box-shadow: 1px 1px 9px 2px rgba(0, 0, 0, 0.52);
+    -webkit-box-shadow: 1px 1px 9px 2px rgba(0, 0, 0, 0.52);
+    -moz-box-shadow: 1px 1px 9px 2px rgba(0, 0, 0, 0.52);
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    row-gap: .5rem;
+    padding: 1.5rem;
+    padding-top: 3.2rem;
+    position: relative;
+    margin-top: -7rem;
+    top: 3rem;
+    width: 300px;
+    background: transparent;
+    height: 200px;
+    z-index: 1;
+    border-radius: 0 0rem 1rem 1rem;
+}
+
+.box-supper .label_placeholder {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: row;
+}
+
+ .box-supper .label_placeholder .label_placeholder_content {
+    background: rgba(157, 149, 255, 0.47);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.9px);
+    -webkit-backdrop-filter: blur(8.9px);
+    border: 1px solid rgba(157, 149, 255, 0.26);
+    /* From https://css.glass */
+    background: rgba(157, 149, 255, 0.47);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.9px);
+    -webkit-backdrop-filter: blur(8.9px);
+    border: 1px solid rgba(157, 149, 255, 0.26);
+
+    padding: .3rem;
+    border-radius: 1.5rem;
+    transition: .3s ease;
+    color: #9b0efe;
+}
+.box-supper .label_placeholder .label_placeholder_content:hover {
+    background-color: #9b0efe;
+    color: white;
+}
+
+.box-supper .price {
+    color: #9b0efe;
+    font-size: 2rem;
+}
