@@ -13,7 +13,7 @@
 html {
   width: 100%;
   height: 100%;
-  background: white;
+  background: #eeeeee;
   background-size: 100% auto;
   color: #bfb9d7;
   overflow-x: hidden;
@@ -45,7 +45,7 @@ header {
 }
 
 header .brand {
-  color: #fff;
+  color: #eeeeee;
   font-size: 1.5em;
   font-weight: 800;
   text-transform: uppercase;
@@ -66,7 +66,7 @@ header nav ul li {
 
 header nav ul li a {
   position: relative;
-  color: #fff;
+  color: #eeeeee;
   font-size: 1em;
   font-weight: 500;
   text-decoration: none;
@@ -137,7 +137,7 @@ header nav ul li a:hover:before {
   }
 
   header nav ul {
-    background-color: #fff;
+    background-color: #eeeeee;
     width: 600px;
     min-width: 600px;
     margin: 20px;
@@ -215,7 +215,7 @@ header nav ul li a:hover:before {
   flex-direction: column;
   position: relative;
   z-index: 999;
-  color: #fff;
+  color: #eeeeee;
   width: 30%;
 
   margin: 0 13rem;
@@ -229,7 +229,7 @@ header nav ul li a:hover:before {
 }
 
 .main_slider .video_slide .content button a {
-  color: #fff;
+  color: #eeeeee;
   text-decoration: none;
 }
 
@@ -280,14 +280,14 @@ header nav ul li a:hover:before {
 }
 
 .main_slider .video_slide .content .box:hover:before {
-  border-color: #fff;
+  border-color: #eeeeee;
   height: 100%;
   transform: translateX(0);
   transition: 0.3s transform linear, 0.3s height linear 0.3s;
 }
 
 .main_slider .video_slide .content .box:hover:after {
-  border-color: #fff;
+  border-color: #eeeeee;
   height: 100%;
   transform: translateX(0);
   transition: 0.3s transform linear, 0.3s height linear 0.5s;
@@ -307,7 +307,7 @@ header nav ul li a:hover:before {
 }
 
 .main_slider .video_slide .content a {
-  background-color: #fff;
+  background-color: #eeeeee;
   padding: 15px 35px;
   color: #2696E9;
   font-size: 1.1em;
@@ -340,7 +340,7 @@ header nav ul li a:hover:before {
   height: 12px;
   border-radius: 50%;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #eeeeee;
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
@@ -367,7 +367,7 @@ header nav ul li a:hover:before {
 }
 
 .main_slider .media_icons a {
-  color: #fff;
+  color: #eeeeee;
   font-size: 1.6em;
   transition: 0.3s ease;
 }
@@ -403,7 +403,7 @@ header nav ul li a:hover:before {
   column-gap: 6rem;
   width: 900px;
   height: 120px;
-  background-color: white;
+  background-color: #eeeeee;
   z-index: 1000;
   border-radius: 4rem;
   position: absolute;
@@ -434,7 +434,7 @@ header nav ul li a:hover:before {
 
 #top_selling {
   height: 900px;
-  background-color: white;
+  background-color: #eeeeee;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -477,7 +477,7 @@ header nav ul li a:hover:before {
 
 .read_more:hover {
   box-shadow: inset 0 100px 0 0 #9b0efe;
-  color: #fff;
+  color: #eeeeee;
 }
 
 #top_selling .products {
@@ -588,7 +588,7 @@ border: 1px solid rgba(157, 149, 255, 0.26);
 
 #top_selling .products .box-supper .label_placeholder .label_placeholder_content:hover {
   background-color: #9b0efe;
-  color: white;
+  color: #eeeeee;
 }
 
 #top_selling .products .box-supper .price {
@@ -778,7 +778,7 @@ border: 1px solid rgba(157, 149, 255, 0.26);
 
 .inner-page-sections i {
   position: absolute;
-  color: #FFFFFF;
+  color: #eeeeee;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -975,7 +975,7 @@ border: 1px solid rgba(157, 149, 255, 0.26);
   align-items: center;
   border-radius: 3rem;
   width: 45%;
-  color: #fff;
+  color: #eeeeee;
   font-size: 3rem;
   /* background: rgba(183, 136, 183, 0.47);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -989,7 +989,7 @@ border: 1px solid rgba(157, 149, 255, 0.26);
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  color: #FFFFFF;
+  color: #eeeeee;
   /* background: rgba(183, 136, 183, 0.47);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8.9px);
