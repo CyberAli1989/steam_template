@@ -1,3 +1,126 @@
+.logIN_button{
+  left: 0;
+  top: .5rem;
+  position: absolute;
+  height: 45px;
+  width: 130px;
+  margin: 0 40px;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+  background: #0d0d0d;
+  overflow: hidden;
+  transition: 0.6s;
+}
+.logIN_button{
+  color: #206592;
+  border-color: #206592;
+}
+
+.logIN_button:before, .logIN_button:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  height: 100%;
+  filter: blur(30px);
+  opacity: 0.4;
+  transition: 0.6s;
+}
+.logIN_button:before{
+  width: 60px;
+  background: rgba(255,255,255,0.6);
+  transform: translateX(-130px) skewX(-45deg);
+}
+.logIN_button:after{
+  width: 30px;
+  background: rgba(255,255,255,0.6);
+  transform: translateX(-130px) skewX(-45deg);
+}
+.logIN_button:hover:before,
+.logIN_button:hover:after{
+  opacity: 0.6;
+  transform: translateX(320px) skewX(-45deg);
+}
+.logIN_button:hover{
+  color: #f2f2f2;
+}
+.logIN_button:hover{
+  background: #206592;
+}
+#open-btn:hover {
+
+  background-color: white;
+  color: black;
+
+}
+
+#modal {
+
+  background-color: var(--body-color);
+  width: 700px;
+  height: 500px;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  padding: 15px;
+
+  animation-name: animateModal;
+  animation-duration: .4s;
+
+}
+
+#close-btn {
+  font-size: 2rem;
+  top : 0 ;
+  right: 1rem;
+    position: absolute;
+}
+
+#close-btn:hover {
+  cursor: pointer;
+  color: red;
+}
+
+#modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.2);
+  
+}
+
+/* Modal Animation */
+
+@keyframes animateModal {
+
+  from {
+      top: -300px;
+      opacity: 0;
+  }
+
+  to {
+      top: 50%;
+      opacity: 1;
+  }
+}
+
 .first_mage {
     position: relative;
     display: flex;
