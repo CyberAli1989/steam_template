@@ -1018,6 +1018,35 @@ border: 1px solid rgba(157, 149, 255, 0.26);
 .window_box i:hover {
   font-size: 4rem;
 }
+.read_more__window_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  bottom: -3rem;
+  left: 8rem;
+  width: 150px;
+  height: 100px;
+  background: rgba(183, 136, 183, 0.47);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.9px);
+  -webkit-backdrop-filter: blur(8.9px);
+  border-radius: 16px;
+  z-index: 1000;
+}
+.read_more__window_page:hover {
+  position: absolute;
+  /* content: ""; */
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
 footer {
   position: relative;
   background-color: #2b4389;
