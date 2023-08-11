@@ -1,8 +1,26 @@
 
-var slideUp = {
-    distance: '150%',
-    origin: 'bottom',
-    opacity: null
-};
+const openButton = document.querySelector('#open-btn')
+const closeButton = document.querySelector('#close-btn')
+const modalContainer = document.querySelector('#modal-container')
 
-ScrollReveal().reveal('.slide-up', slideUp);
+openButton.addEventListener('click',function(){
+
+    modalContainer.style.display = 'block';
+    
+})
+
+closeButton.addEventListener('click', () => {
+
+    modalContainer.style.display = 'none';
+
+})
+
+window.addEventListener('click', (e)=> {
+
+    if(e.target === modalContainer){
+
+        modalContainer.style.display = 'none';
+
+    }
+    console.log(e.target)
+})
