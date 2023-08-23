@@ -1,0 +1,62 @@
+$color_1: #9b0efe;
+$background-color_1: #2696E9;
+
+.best-game__0fYear {
+	height: 1000px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row-reverse;
+	column-gap: 5rem;
+	width: 80%;
+	padding: 3rem;
+}
+.best-game__0fYear_img__placeHolder {
+	width: 100%;
+	img {
+		width: 120%;
+		height: 600px;
+		object-fit: cover;
+		border-radius: 3rem;
+		transition: .3s ease;
+		box-shadow: 20px 20px 0px -5px rgba(212, 180, 255, 0.52);
+		-webkit-box-shadow: 20px 20px 0px -5px rgba(212, 180, 255, 0.52);
+		-moz-box-shadow: 20px 20px 0px -5px rgba(212, 180, 255, 0.52);
+		&:hover {
+			box-shadow: none;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+		}
+	}
+}
+.best-game__0fYear__content {
+	width: 100%;
+	ul {
+		display: flex;
+		align-items: start;
+		flex-direction: column;
+		width: 100%;
+		row-gap: 3rem;
+		&:first-child {
+			font-size: 2rem;
+			color: $color_1;
+		}
+		&:last-child {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 20%;
+		}
+		li {
+			display: flex;
+			align-items: center;
+			text-align: start;
+			width: 100%;
+			text-decoration: none;
+			list-style: none;
+			h3 {
+				background-color: $background-color_1;
+			}
+		}
+	}
+}
